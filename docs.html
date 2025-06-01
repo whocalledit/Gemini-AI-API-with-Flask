@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gemini AI MultiTool API Docs</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container py-5">
+  <h1 class="mb-4 text-primary">🌟 Gemini AI MultiTool API</h1>
+  <p class="lead">A powerful multitool API powered by Google Gemini – ideal for developers who need code explanations, startup ideas, image captions, or tone detection.</p>
+
+  <hr>
+
+  <h2>📌 Endpoint</h2>
+  <pre><code>POST https://gemini-ai-api-with-flask.onrender.com/ai-multitool</code></pre>
+
+  <h2>🧾 Request Format (JSON)</h2>
+  <pre><code>{
+  "task": "code_explain",  // or: idea_generator, image_caption, tone_detector
+  "input": "your input string here",
+  "extra_params": { }      // optional
+}</code></pre>
+
+  <h2>✅ Response</h2>
+  <pre><code>{
+  "status": "success",
+  "task": "code_explain",
+  "input": "...",
+  "output": "...",
+  "cached": false,
+  "timestamp": "..."
+}</code></pre>
+
+  <hr>
+
+  <h2>🚀 Example Usage</h2>
+
+  <h4>🔧 cURL</h4>
+  <pre><code>curl -X POST https://gemini-ai-api-with-flask.onrender.com/ai-multitool \
+  -H "Content-Type: application/json" \
+  -d '{"task":"code_explain", "input":"def hello(): print(\"Hello\")"}'</code></pre>
+
+  <h4>🐍 Python (requests)</h4>
+  <pre><code>import requests
+
+url = "https://gemini-ai-api-with-flask.onrender.com/ai-multitool"
+data = {
+    "task": "idea_generator",
+    "input": "climate change solutions"
+}
+
+response = requests.post(url, json=data)
+print(response.json())</code></pre>
+
+  <h4>🌐 JavaScript (fetch)</h4>
+  <pre><code>fetch("https://gemini-ai-api-with-flask.onrender.com/ai-multitool", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    task: "tone_detector",
+    input: "I'm really happy about the results!"
+  })
+})
+.then(res => res.json())
+.then(data => console.log(data));</code></pre>
+
+  <h4>📦 Node.js (Axios)</h4>
+  <pre><code>const axios = require("axios");
+
+axios.post("https://gemini-ai-api-with-flask.onrender.com/ai-multitool", {
+  task: "image_caption",
+  input: "https://example.com/image.jpg"
+})
+.then(response => {
+  console.log(response.data);
+})
+.catch(error => {
+  console.error(error);
+});</code></pre>
+
+  <hr>
+
+  <h2>❓ Tasks Overview</h2>
+  <ul>
+    <li><strong>code_explain</strong>: Explains any code snippet in simple English</li>
+    <li><strong>idea_generator</strong>: Generates startup ideas based on keywords</li>
+    <li><strong>image_caption</strong>: Describes an image via URL or base64</li>
+    <li><strong>tone_detector</strong>: Detects the tone/emotion in a sentence</li>
+  </ul>
+
+  <h2>📈 Status Codes</h2>
+  <ul>
+    <li><strong>200</strong> - Success</li>
+    <li><strong>422</strong> - Validation Error</li>
+    <li><strong>500</strong> - Internal Server Error</li>
+  </ul>
+
+  <footer class="mt-5 text-muted">
+    <p>🚀 Powered by Google Gemini | Created by Hiran | <a href="https://render.com">Hosted on Render</a></p>
+  </footer>
+</div>
+
+</body>
+</html>
