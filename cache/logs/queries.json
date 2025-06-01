@@ -1,0 +1,32 @@
+[
+  {
+    "task": "code_explain",
+    "input": "def greet():\n    print('Hello, AI!')",
+    "params": null,
+    "timestamp": "2025-06-01T16:12:01.966592"
+  },
+  {
+    "task": "idea_generator",
+    "input": "mental health, app, students",
+    "params": null,
+    "timestamp": "2025-06-01T16:12:08.853647"
+  },
+  {
+    "task": "tone_detector",
+    "input": "I'm absolutely devastated by the outcome.",
+    "params": null,
+    "timestamp": "2025-06-01T16:12:21.980726"
+  },
+  {
+    "task": "image_caption",
+    "input": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Example.jpg/800px-Example.jpg",
+    "params": null,
+    "timestamp": "2025-06-01T16:12:27.136554"
+  },
+  {
+    "task": "code_explain",
+    "input": "",
+    "params": null,
+    "timestamp": "2025-06-01T16:12:36.234710"
+  }
+]
