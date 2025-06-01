@@ -1,7 +1,7 @@
 import requests
 import json
 
-BASE_URL = "http://localhost:8000/ai-multitool"
+BASE_URL = "https://gemini-ai-api-with-flask.onrender.com/ai-multitool"
 
 test_cases = [
     {
